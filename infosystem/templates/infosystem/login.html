@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<!--register page-->
+
+<!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +17,6 @@
     <div class="panel panel-default panel-body">
         <h1>用户登录</h1>
 
-        <!--action：对应的登录函数-->
         <form action="{% url 'infosystem:login_user' %}" method="post" enctype="multipart/form-data" role="form">
             {% csrf_token %}
             <div class="form-group">
@@ -39,8 +40,8 @@
     </div>
 </div>
 <div class="container-fluid" align="center" style="margin-top: 10px">
-
     <p>还没有账号？<a href="{% url 'infosystem:register' %}">点击进行注册</a></p>
 </div>
 </body>
+
 </html>
