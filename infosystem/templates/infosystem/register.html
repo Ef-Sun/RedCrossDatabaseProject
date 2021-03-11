@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block login_display %}
-    <!--href后的#更换为登录所用url-->
 <li><a href="{% url 'infosystem:login_user' %}"><span class="glyphicon glyphicon-off" aria-hidden="true">登录></span></a></li>
 {% endblock %}
 
@@ -14,7 +13,7 @@
                 <div>
                     <h1>注册账号</h1><br>
                 </div>
-                <!--action后面更改为注册所用函数-->
+
                 <form role="form" action="{% url 'infosystem:register' %}" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% include "form_template.html" %}
@@ -32,7 +31,6 @@
 
             </div>
     <div class="container-fluid" align="center" style="margin-top: 10px">
-        <!--href后面放入登录的url-->
                 <p>已有账号？ <a href="{% url 'infosystem:login_user' %}">点击登录</a></p>
             </div>
         </div>
